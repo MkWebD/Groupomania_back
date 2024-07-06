@@ -1,0 +1,17 @@
+version: "2"
+services:
+  web:
+    image: kevinmas27/groupomania:latest
+    ports:
+      - 3002:3000
+    volumes:
+      - .:/piiquante
+    environment:
+      - MONGODB_USER=
+      - MONGODB_PASSWORD=
+      - MONGODB_CLUSTER_NAME=
+      - MONGODB_DATABASE=
+      - JWT_TOKEN=
+      - PORT=3000
+      - CRYPTOJS_SECRET_KEY=
+    command: npm start
